@@ -1,0 +1,107 @@
+.home-page {
+  background: #fcfcfc;
+
+  //   intro-slider
+  .intro-slider {
+    &-inner {
+      padding-top: 32px;
+      .wrap-slider {
+        //   overflow: hidden;
+        .wrap-img {
+          padding: 0 15px;
+          text-align: center;
+          a {
+            display: inline-block;
+            box-shadow: 0px 10.89px 29.041px rgba(0, 0, 0, 0.12);
+          }
+        }
+        .slick-list {
+          padding-inline: 0 !important;
+          padding-bottom: 90px !important;
+        }
+        .slick-slide img {
+          margin: 0 auto;
+        }
+        .slick-dots {
+          bottom: 16px;
+          li {
+            &.slick-active button:before {
+              background: #272727;
+            }
+            button:before {
+              content: "";
+              border-radius: 50%;
+              width: 10px;
+              height: 10px;
+              background-color: #d9d9d9;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+        .slick-dotted.slick-slider {
+          margin-bottom: 0;
+        }
+        .slick-next,
+        .slick-prev {
+          width: 60px;
+          height: 60px;
+          z-index: 2;
+          background: #fef9f4;
+          border-radius: 50%;
+          left: 20.5%;
+          top: 41.3%;
+          transition: all 0.2s;
+          overflow: hidden;
+          opacity: 0.6;
+          &:hover {
+            opacity: 1;
+          }
+          &::before {
+            content: "";
+            background: url(../img/icon/prev.svg) no-repeat center;
+            background-size: contain;
+            width: 60px;
+            height: 60px;
+            display: block;
+          }
+        }
+        .slick-next {
+          left: unset;
+          right: 20.5%;
+          &::before {
+            content: "";
+            background: url(../img/icon/next.svg) no-repeat center;
+            background-size: contain;
+            width: 60px;
+            height: 60px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  //   wrap-product
+  .wrap-product {
+    .categories {
+      width: 280px;
+      padding: 21px 18px;
+      .title {
+        color: #272727;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 11px;
+      }
+      ul {
+        li {
+            padding: 26px 23px;
+        }
+      }
+    }
+  }
+}
