@@ -7,5 +7,15 @@ $(document).ready(function () {
     centerMode: true,
     arrows: true,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: false,
+        },
+      },
+    ],
   });
 });
