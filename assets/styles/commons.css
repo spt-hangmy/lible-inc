@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -155,6 +156,9 @@ body {
 .flex {
   display: flex; }
 
+.no-scroll {
+  overflow: hidden; }
+
 .header {
   border-bottom: 1px solid #d9d9d9;
   background: #fff;
@@ -169,6 +173,11 @@ body {
     padding: 25px 32px 24px; }
     .header-inner .menu-mobile {
       display: none; }
+      .header-inner .menu-mobile .wrap-menu-mb {
+        display: none; }
+      .header-inner .menu-mobile .close-icon {
+        display: none;
+        /* Thêm các thuộc tính CSS cho icon close */ }
     .header-inner h1 a {
       display: inline-block;
       line-height: 0;
@@ -204,6 +213,111 @@ body {
 
 .body-content {
   padding-top: 110px; }
+  .body-content .breadcrumb-inner {
+    color: #8b8b8b;
+    font-size: 14px;
+    line-height: normal;
+    align-items: center;
+    padding: 26px 80px 18px;
+    gap: 5px; }
+  .body-content .categories {
+    width: 280px;
+    padding: 21px 0; }
+    .body-content .categories .title {
+      margin-left: 18px;
+      color: #272727;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 11px; }
+    .body-content .categories ul li {
+      cursor: pointer;
+      border-bottom: 1px solid #e7e7e7;
+      margin-bottom: 3px;
+      transition: all 0.3s; }
+      .body-content .categories ul li:hover a {
+        left: 10px; }
+      .body-content .categories ul li a {
+        padding: 25px 23px 24px;
+        gap: 24px;
+        position: relative;
+        align-items: center;
+        color: #272727; }
+      .body-content .categories ul li .open {
+        position: absolute;
+        right: -7px;
+        top: 50%;
+        transform: translateY(-50%); }
+  .body-content .wrap-product .product {
+    gap: 80px;
+    justify-content: space-between; }
+  .body-content .wrap-product .list-product {
+    width: calc(100% - 280px - 80px);
+    padding-top: 21px; }
+    .body-content .wrap-product .list-product h2 {
+      color: #272727;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: normal;
+      padding-bottom: 16px;
+      position: relative;
+      margin-bottom: 48px; }
+      .body-content .wrap-product .list-product h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 2px;
+        background-color: #f50a00;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+    .body-content .wrap-product .list-product ul {
+      gap: 43px 24px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 64px; }
+      .body-content .wrap-product .list-product ul li {
+        width: calc((100% - 24px * 2) / 3);
+        transition: all 0.3s; }
+        .body-content .wrap-product .list-product ul li:hover {
+          background: #eee;
+          border-radius: 8px; }
+        .body-content .wrap-product .list-product ul li a {
+          display: block; }
+        .body-content .wrap-product .list-product ul li img {
+          width: 100%;
+          border-radius: 10px;
+          margin-bottom: 2px; }
+        .body-content .wrap-product .list-product ul li .date {
+          color: #bbb;
+          font-size: 11px;
+          line-height: normal;
+          margin-bottom: 2px; }
+        .body-content .wrap-product .list-product ul li .desc {
+          color: #272727;
+          font-size: 15px;
+          line-height: 1.6; }
+  .body-content .wrap-product .see-more {
+    cursor: pointer;
+    width: 300px;
+    display: block;
+    padding-block: 16px;
+    margin: 0 auto;
+    border-radius: 40px;
+    border: 1px solid #ff3939;
+    background: #fff;
+    color: #ff3939;
+    text-align: center;
+    font-size: 16px;
+    line-height: normal;
+    transition: all 0.3s; }
+    .body-content .wrap-product .see-more:hover {
+      background: #ff3939;
+      color: #fff;
+      border: 1px solid #ff3939; }
 
 .footer {
   background: #e7e7e7;
@@ -243,7 +357,8 @@ body {
       width: 100%; }
 
   .header-inner {
-    padding: 12px 4px 12px 0; }
+    padding: 12px 4px 12px 0;
+    position: relative; }
     .header-inner h1 a {
       width: 218px; }
     .header-inner .wrap-search {
@@ -254,9 +369,109 @@ body {
         border: none;
         background: transparent;
         line-height: 0; }
+      .header-inner .menu-mobile .wrap-menu-mb {
+        position: absolute;
+        width: calc(100% + 16px * 2);
+        top: 76px;
+        left: 0;
+        background-color: #fff;
+        padding-top: 32px;
+        margin: -16px;
+        text-align: center;
+        height: calc(100vh - 60px);
+        overflow: scroll; }
+        .header-inner .menu-mobile .wrap-menu-mb .wrap-search {
+          display: block;
+          margin-bottom: 20px;
+          padding-inline: 16px; }
+          .header-inner .menu-mobile .wrap-menu-mb .wrap-search img {
+            left: 34px; }
+          .header-inner .menu-mobile .wrap-menu-mb .wrap-search input {
+            width: 100%; }
+        .header-inner .menu-mobile .wrap-menu-mb .categories ul {
+          margin-bottom: 48px; }
+          .header-inner .menu-mobile .wrap-menu-mb .categories ul li {
+            padding: 25px 23px;
+            border-bottom: 1px solid #e7e7e7; }
+            .header-inner .menu-mobile .wrap-menu-mb .categories ul li a {
+              align-items: center;
+              position: relative;
+              gap: 25px;
+              color: #111;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: normal; }
+              .header-inner .menu-mobile .wrap-menu-mb .categories ul li a img:last-child {
+                position: absolute;
+                right: -5px; }
+        .header-inner .menu-mobile .wrap-menu-mb .close {
+          cursor: pointer;
+          width: 279px;
+          display: block;
+          padding-block: 16px;
+          margin: 0 auto;
+          border-radius: 40px;
+          border: 1px solid #8b8b8b;
+          background: #fff;
+          color: #8b8b8b;
+          text-align: center;
+          font-size: 16px;
+          line-height: normal;
+          transition: all 0.3s;
+          margin-bottom: 44px; }
 
   .body-content {
     padding-top: 60px; }
+    .body-content .wrap-product .product {
+      flex-wrap: wrap;
+      gap: 17px; }
+      .body-content .wrap-product .product .categories {
+        width: 100%;
+        padding-top: 50px; }
+        .body-content .wrap-product .product .categories .title {
+          margin: 0;
+          text-align: center;
+          margin-bottom: 26px; }
+        .body-content .wrap-product .product .categories ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 13px 16px; }
+          .body-content .wrap-product .product .categories ul li {
+            width: calc((100% - 16px * 2) / 3);
+            border: 1px solid #d9d9d9;
+            border-radius: 7px;
+            overflow: hidden; }
+            .body-content .wrap-product .product .categories ul li a {
+              flex-wrap: wrap;
+              color: #000;
+              text-align: center;
+              font-size: 10px;
+              font-weight: 600;
+              line-height: normal;
+              padding: 26px 5px 12px;
+              justify-content: center;
+              gap: 26px;
+              flex-direction: column; }
+            .body-content .wrap-product .product .categories ul li img {
+              width: 40px; }
+              .body-content .wrap-product .product .categories ul li img:last-child {
+                display: none; }
+      .body-content .wrap-product .product .list-product {
+        width: 100%; }
+        .body-content .wrap-product .product .list-product h2 {
+          color: #111;
+          font-size: 24px;
+          margin-bottom: 34px; }
+        .body-content .wrap-product .product .list-product ul {
+          gap: 26px;
+          margin-bottom: 62px; }
+          .body-content .wrap-product .product .list-product ul li {
+            width: 100%; }
+            .body-content .wrap-product .product .list-product ul li img {
+              margin-bottom: 5px; }
+            .body-content .wrap-product .product .list-product ul li .date {
+              margin-bottom: 13px; }
 
   .footer {
     padding: 48px 0 33px; }
@@ -270,7 +485,7 @@ body {
       flex-wrap: wrap;
       justify-content: center;
       margin-bottom: 37px;
-      gap: 20px; }
+      gap: 19px; }
       .footer ul li {
         width: 100%; } }
 

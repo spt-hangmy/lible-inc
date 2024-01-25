@@ -18,4 +18,20 @@ $(document).ready(function () {
       },
     ],
   });
+
+  $("#toggle-menu").click(function () {
+    $(".wrap-menu-mb").slideToggle();
+    $(".menu-icon, .close-icon").toggle();
+
+    // Thêm hoặc xóa lớp chặn scroll cho body
+    $("body").toggleClass("no-scroll");
+  });
+
+  $(".close").click(function () {
+    $(".wrap-menu-mb").slideUp();
+    $(".menu-icon, .close-icon").toggle();
+
+    // Xóa lớp chặn scroll khi đóng menu
+    $("body").removeClass("no-scroll");
+  });
 });
