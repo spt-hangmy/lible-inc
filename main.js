@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // slide intro product home page
   $(".wrap-slider").slick({
     infinite: true,
     slidesToShow: 1,
@@ -19,6 +20,7 @@ $(document).ready(function () {
     ],
   });
 
+  // menu mobile
   $("#toggle-menu").click(function () {
     $(".wrap-menu-mb").slideToggle();
     $(".menu-icon, .close-icon").toggle();
@@ -33,5 +35,10 @@ $(document).ready(function () {
 
     // Xóa lớp chặn scroll khi đóng menu
     $("body").removeClass("no-scroll");
+  });
+
+  $(".toggle-button").click(function () {
+    $(".wrap-catalogue").toggleClass("expanded");
+    $(this).hide();
   });
 });
