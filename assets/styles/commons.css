@@ -246,7 +246,7 @@ body {
         color: #272727; }
       .body-content .categories ul li .open {
         position: absolute;
-        right: -7px;
+        right: 16px;
         top: 50%;
         transform: translateY(-50%); }
   .body-content .wrap-product .product {

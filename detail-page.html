@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+      integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+      integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/styles/commons.css" />
+    <link rel="stylesheet" href="./assets/styles/detail-page.css" />
+  </head>
+  <body>
+    <div class="wrap-page">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <div class="header-inner">
+            <h1>
+              <a href="#">
+                <img src="./assets/img/logo/logo.png" alt="" />
+              </a>
+            </h1>
+            <div class="wrap-search">
+              <img src="./assets/img/icon/search.svg" alt="" />
+              <input type="text" placeholder="何をお探しですか？" />
+            </div>
+            <div class="menu-mobile">
+              <button id="toggle-menu">
+                <img
+                  class="menu-icon"
+                  src="./assets/img/icon/menu-ham.svg"
+                  alt=""
+                />
+                <img
+                  class="close-icon"
+                  src="./assets/img/icon/close.svg"
+                  alt=""
+                />
+              </button>
+              <div class="wrap-menu-mb">
+                <div class="wrap-search">
+                  <img src="./assets/img/icon/search.svg" alt="" />
+                  <input type="text" placeholder="何をお探しですか？" />
+                </div>
+                <div class="categories">
+                  <ul>
+                    <li class="">
+                      <a
+                        href="http://127.0.0.1:5500/categories-page.html"
+                        class="flex"
+                      >
+                        <img
+                          src="./assets/img/icon/cat-1.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        コスメ・化粧品
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="flex">
+                        <img
+                          src="./assets/img/icon/cat-2.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        生活雑貨
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="flex">
+                        <img
+                          src="./assets/img/icon/cat-3.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        家電
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="flex">
+                        <img
+                          src="./assets/img/icon/cat-4.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        パソコン・周辺機器
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="flex">
+                        <img
+                          src="./assets/img/icon/cat-5.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        カメラ
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="flex">
+                        <img
+                          src="./assets/img/icon/cat-6.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        食品
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="flex">
+                        <img
+                          src="./assets/img/icon/cat-7.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        ドリンク・お酒
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="flex">
+                        <img
+                          src="./assets/img/icon/cat-8.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        キッチン用品
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                    <li class="">
+                      <a href="#" class="flex">
+                        <img
+                          src="./assets/img/icon/cat-9.svg"
+                          alt=""
+                          class="cat"
+                        />
+                        ファッション
+                        <img
+                          src="./assets/img/icon/open.svg"
+                          alt=""
+                          class="open"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                  <button class="close">閉じる</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- body content -->
+      <div class="body-content detail-page">
+        <div class="breadcrumb">
+          <div class="container">
+            <div class="breadcrumb-inner flex">
+              <p>TOP</p>
+              ＞
+              <p>コスメ・化粧水</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- product -->
+        <div class="wrap-product">
+          <div class="container-small">
+            <div class="product flex">
+              <div class="categories">
+                <p class="title">カテゴリー</p>
+                <ul>
+                  <li class="">
+                    <a
+                      href="http://127.0.0.1:5500/categories-page.html"
+                      class="flex"
+                    >
+                      <img
+                        src="./assets/img/icon/cat-1.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      コスメ・化粧品
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="flex">
+                      <img
+                        src="./assets/img/icon/cat-2.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      生活雑貨
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="flex">
+                      <img
+                        src="./assets/img/icon/cat-3.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      家電
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="flex">
+                      <img
+                        src="./assets/img/icon/cat-4.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      パソコン・周辺機器
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="flex">
+                      <img
+                        src="./assets/img/icon/cat-5.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      カメラ
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="flex">
+                      <img
+                        src="./assets/img/icon/cat-6.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      食品
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="flex">
+                      <img
+                        src="./assets/img/icon/cat-7.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      ドリンク・お酒
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="flex">
+                      <img
+                        src="./assets/img/icon/cat-8.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      キッチン用品
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="flex">
+                      <img
+                        src="./assets/img/icon/cat-9.svg"
+                        alt=""
+                        class="cat"
+                      />
+                      ファッション
+                      <img
+                        src="./assets/img/icon/open.svg"
+                        alt=""
+                        class="open"
+                      />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="list-product">
+                <img
+                  class="thumbnail"
+                  src="./assets/img/landing/thumbnail.png"
+                  alt=""
+                />
+                <h1>
+                  【2024年】脂性肌向け化粧水のおすすめ人気ランキング5選【徹底比較】
+                </h1>
+                <p class="date flex">2024.00.00 <span>更新</span></p>
+                <p class="brief">
+                  テカリ・ベタつきが気になりやすい脂性肌（オイリー肌）は、肌トラブルとしてニキビができやすい傾向があります。また、インナードライ肌の場合には水分量が少なく、肌の内側が乾燥してごわつきが気になることも…。<br />
+                  自分にあった化粧水を見つけようと思っても、キュレル・ちふれ化粧品・無印良品などのプチプラブランドから、アルビオン・クラランスなどのデパコスや韓国コスメまで、さまざまな商品が市販されていて迷ってしまいますよね。<br />
+                  今回はAmazon・楽天市場・Yahoo!ショッピングなどで売れ筋上位の脂性肌向け化粧水17商品を比較して、最もおすすめの脂性肌向け化粧水を決定します。
+                </p>
+                <div class="note flex">
+                  <img src="./assets/img/icon/note.svg" alt="" />
+                  <p>
+                      本コンテンツは広告を含みます。詳しくは<a href="#">こちら</a>をご覧ください。
+                  </p>
+                </div>
+                <h2 class="sub-title">あなたの肌は脂性肌？インナードライ？見極めるポイントを押さえよう</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <footer class="footer">
+        <p>あなたにピッタリな商品がわかる</p>
+        <div class="wrap-img">
+          <img src="./assets/img/logo/logo-footer.png" alt="" />
+        </div>
+        <ul class="flex">
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="#">利用規約</a></li>
+          <li><a href="#">運営会社</a></li>
+          <li><a href="#">コンテンツ制作ポリシー</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+        <p>© 2024 OKWAVE, Inc.</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
