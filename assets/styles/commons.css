@@ -130,6 +130,9 @@ table {
 a {
   text-decoration: none; }
 
+html {
+  font-size: 16px; }
+
 body {
   font-family: "Noto Sans JP", sans-serif; }
 
@@ -137,6 +140,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+.mb-2 {
+  margin-bottom: 2rem; }
 
 .container {
   max-width: 1440px;
@@ -212,7 +218,8 @@ body {
     left: 19px; }
 
 .body-content {
-  padding-top: 110px; }
+  padding-top: 110px;
+  padding-bottom: 70px; }
   .body-content .breadcrumb-inner {
     color: #8b8b8b;
     font-size: 14px;
@@ -255,7 +262,7 @@ body {
   .body-content .wrap-product .list-product {
     width: calc(100% - 280px - 80px);
     padding-top: 21px; }
-    .body-content .wrap-product .list-product h2 {
+    .body-content .wrap-product .list-product .title-list {
       color: #272727;
       text-align: center;
       font-size: 32px;
@@ -264,7 +271,7 @@ body {
       padding-bottom: 16px;
       position: relative;
       margin-bottom: 48px; }
-      .body-content .wrap-product .list-product h2::after {
+      .body-content .wrap-product .list-product .title-list::after {
         content: "";
         display: block;
         width: 60px;
@@ -421,7 +428,12 @@ body {
           margin-bottom: 44px; }
 
   .body-content {
-    padding-top: 60px; }
+    padding-top: 60px;
+    padding-bottom: 65px; }
+    .body-content .breadcrumb-inner {
+      padding: 15px 0 !important;
+      font-size: 12px;
+      gap: 3.5px; }
     .body-content .wrap-product .product {
       flex-wrap: wrap;
       gap: 17px; }
@@ -459,7 +471,7 @@ body {
                 display: none; }
       .body-content .wrap-product .product .list-product {
         width: 100%; }
-        .body-content .wrap-product .product .list-product h2 {
+        .body-content .wrap-product .product .list-product .title-list {
           color: #111;
           font-size: 24px;
           margin-bottom: 34px; }

@@ -63,7 +63,7 @@
     .pagination {
       justify-content: center;
       gap: 12px;
-      margin-bottom: 70px;
+    //   margin-bottom: 70px;
       a {
         display: block;
         width: 48px;
@@ -113,7 +113,7 @@
     }
     .breadcrumb {
       &-inner {
-        padding: 10px 0;
+        padding: 10px 0 !important;
         font-size: 12px;
         gap: 3.5px;
       }
@@ -123,7 +123,7 @@
         .categories {
           order: 1;
           padding-top: 47px;
-          padding-bottom: 65px;
+          padding-bottom: 0;
         }
         .list-product {
           padding-top: 25px;

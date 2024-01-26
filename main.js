@@ -19,6 +19,14 @@ $(document).ready(function () {
       },
     ],
   });
+  // slider-product
+  $(".slider-product").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: true,
+  });
 
   // menu mobile
   $("#toggle-menu").click(function () {
